@@ -1,0 +1,72 @@
+name: CI
+
+# Controls when the action will run.
+# For GITHUB_TOKEN access, the workflow must be in the "main" branch.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel.
+jobs:
+  # This job builds and tests the application
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ '20.x' ] # Targeting Node.js 20 for compatibility
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm' # Cache npm dependencies
+
+      - name: Install Dependencies
+        run: npm ci # Use 'npm ci' for deterministic installs in CI
+
+      - name: Run Linter and Formatter (Biome)
+        run: npx @biomejs/biome check --apply src/
+
+      - name: Run Tests (Vitest)
+        run: npm test
+
+      - name: Run End-to-End Tests (Playwright)
+        # This step assumes Playwright is configured and tests are in a designated directory
+        # Adjust the command based on your Playwright setup
+        run: npx playwright test
+
+      - name: Upload Coverage Reports (Codecov)
+        # This step requires a CODECOV_TOKEN secret to be set in repository settings.
+        # It assumes your test runner (e.g., Vitest) generates coverage reports in a standard format (e.g., lcov).
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          directory: ./coverage/ # Adjust path to your coverage directory if necessary
+          fail_ci_if_error: true
+
+      - name: Build Application (if applicable)
+        # This step would typically be used for web apps or packages that need a build step.
+        # For a pure JS library or backend service, this might be omitted or replaced.
+        # Example for Vite-based frontend:
+        # run: npm run build
+        # Example for Tauri:
+        # run: npm run tauri build
+        # For this specific project, assuming it's a web app, we'll include a placeholder.
+        # If it's a library, this might not be needed.
+        run: echo "Skipping build step for now, assuming library or backend service."
+
+      - name: Archive Artifacts (Optional)
+        # Use this step to archive build outputs or test reports if needed for later inspection.
+        # Uncomment and configure if necessary.
+        # uses: actions/upload-artifact@v3
+        # with:
+        #   name: build-output
+        #   path: dist/ # Adjust path to your build output directory
