@@ -1,21 +1,11 @@
-MIT License
+Copyright (c) 2024 Chirag Doshi
 
-Copyright (c) 2025 Readable Spokable PDF
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+**Summary of Terms:**
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+**Attribution (BY):** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**NonCommercial (NC):** You may not use the material for commercial purposes. If you wish to use this work commercially, you must contact the copyright holder (chirag127) directly to negotiate a separate agreement.
+
+**No Derivatives (ND) - Implied via NC Context:** While CC BY-NC 4.0 permits derivatives, the spirit of this repository mandates that significant modifications intended for public distribution should respect the original's intent or seek permission, especially when commercializing the core technology derived from this source.
