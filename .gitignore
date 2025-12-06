@@ -1,28 +1,41 @@
-# Dependencies
+# Dependency Directories
 node_modules/
+.pnpm/
+.yarn/
 
-# Build output
+# Build Output
 dist/
+build/
+*.js.map
 
-# IDE
+# IDE & Editor Specific
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
+# Log and Temp Files
 *.log
 npm-debug.log*
+temp/
 
-# Environment
+# Environment Variables & Secrets
 .env
 .env.local
 
-# Test files
-test-pdfs/
-*.pdf
+# Test Coverage & Artifacts
+coverage/
+*.test-report.xml
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Configuration/Caching for Speed Tools (Common in Modern JS/TS projects)
+.biome.cache/
+.ruff_cache/
+
+# Browser Specific Caches (if applicable for web-related parts)
+.cache/
+
+# Git Artifacts (Standard)
+.git-blame-ignore-revs
