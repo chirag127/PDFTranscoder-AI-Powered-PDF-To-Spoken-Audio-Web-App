@@ -1,80 +1,114 @@
-# Contributing to PDFTranscoder-AI-Powered-PDF-To-Spoken-Audio-Web-App
+# 🤝 Contributing to PDF-To-Speech-AI-Converter-Web-App
 
-Thank you for considering contributing to the PDFTranscoder project! We welcome your contributions to improve this AI-powered PDF to spoken audio web application.
+We welcome contributions to the `PDF-To-Speech-AI-Converter-Web-App` project! As a testament to our commitment to excellence, we adhere to the **Apex Technical Authority** standards, ensuring that all contributions are professional, well-tested, and align with our future-proof architecture.
 
-## 1. Code of Conduct
+## 🚀 Our Vision & Philosophy
 
-This project adheres to the Contributor Covenant Code of Conduct. Please make sure to read and follow it to ensure a positive and inclusive community. [Code of Conduct](https://github.com/chirag127/PDFTranscoder-AI-Powered-PDF-To-Spoken-Audio-Web-App/blob/main/CODE_OF_CONDUCT.md)
+*   **Zero-Defect, High-Velocity, Future-Proof:** We strive for quality and speed without compromising long-term maintainability.
+*   **Elite Standards:** All code, documentation, and contributions must meet FAANG-level quality benchmarks.
+*   **Professional Archival:** Even retired features are treated as valuable, well-documented assets.
 
-## 2. How to Contribute
+## 🛠️ Development Environment Setup
 
-We accept contributions in various forms, including:
-
-*   **Bug Reports:** Please submit detailed bug reports via GitHub Issues, including steps to reproduce the issue, expected behavior, and actual behavior.
-*   **Feature Requests:** Suggest new features or improvements through GitHub Issues.
-*   **Code Contributions:** Submit Pull Requests for bug fixes or new features.
-
-## 3. Development Setup
-
-To set up your development environment:
+To contribute effectively, you'll need to set up a local development environment that mirrors our production stack.
 
 1.  **Clone the Repository:**
     bash
-    git clone https://github.com/chirag127/PDFTranscoder-AI-Powered-PDF-To-Spoken-Audio-Web-App.git
-    cd PDFTranscoder-AI-Powered-PDF-To-Spoken-Audio-Web-App
+    git clone https://github.com/chirag127/PDF-To-Speech-AI-Converter-Web-App.git
+    cd PDF-To-Speech-AI-Converter-Web-App
     
 
 2.  **Install Dependencies:**
-    Since this is a JavaScript project, you'll typically use npm or yarn.
+    This project uses **Node.js** and **npm** (or yarn/pnpm). Ensure you have Node.js v20+ installed.
     bash
-    # Using npm
     npm install
-
-    # Or using yarn
+    # or
     # yarn install
+    # or
+    # pnpm install
     
 
-3.  **Build and Run:**
-    Refer to the `README.md` for specific build and run commands.
-
-## 4. Contributing Guidelines
-
-*   **Branching:** Create a new branch for each feature or bug fix. Use a descriptive name (e.g., `feat/add-new-audio-format`, `fix/resolve-text-extraction-bug`).
-*   **Pull Requests:**
-    *   Submit PRs against the `main` branch.
-    *   Ensure your code is well-commented and follows established JavaScript best practices.
-    *   Include clear descriptions of your changes.
-    *   Run all tests and ensure they pass before submitting.
-*   **Testing:** All contributions must include comprehensive tests.
-    *   Unit tests should be written using Vitest.
-    *   End-to-end tests should be written using Playwright.
-    *   Run tests using `npm test` or `yarn test`.
-*   **Linting & Formatting:** Code must adhere to the linting and formatting rules enforced by Biome.
-    *   Run the linter: `npm run lint` or `yarn lint`
-    *   Run the formatter: `npm run format` or `yarn format`
-*   **Code Style:** Follow the principles outlined in the `AGENTS.md` document, particularly regarding AI integration and architectural patterns.
-
-## 5. AI Agent Directives
-
-This project leverages AI, specifically Google Gemini, for core functionality. When contributing:
-
-*   **Model Versioning:** Be mindful of the AI model versions used (e.g., `gemini-3-pro`). Ensure compatibility or clearly document any version changes.
-*   **API Keys:** Never commit API keys directly into the codebase. Use environment variables (e.g., `.env` files for local development).
-*   **AI Interaction Logic:** Ensure AI interaction logic is modular, well-abstracted, and includes robust error handling and retry mechanisms.
-*   **Prompt Engineering:** When modifying prompts, consider clarity, conciseness, and the AI model's capabilities to achieve the desired output for PDF processing and audio generation.
-*   **Ethical AI:** Adhere to ethical AI principles, avoiding bias and ensuring responsible use of AI technologies.
-
-## 6. Submitting Your Changes
-
-1.  Ensure your local `main` branch is up-to-date:
+3.  **Environment Variables:**
+    Some features, particularly AI integrations, might require API keys. Create a `.env` file in the root directory. Refer to `.env.example` for structure.
     bash
-    git checkout main
-    git pull origin main
+    cp .env.example .env
+    # Populate your API keys in .env
     
-2.  Create a feature branch: `git checkout -b my-new-feature`
-3.  Make your changes and commit them.
-4.  Run tests and linting.
-5.  Push your branch: `git push origin my-new-feature`
-6.  Open a Pull Request on GitHub.
 
-We look forward to your contributions!
+## ✅ Contribution Workflow
+
+Follow these steps for all contributions:
+
+1.  **Fork the Repository:** Create your own fork of `chirag127/PDF-To-Speech-AI-Converter-Web-App`.
+2.  **Create a New Branch:** Create a descriptive branch for your feature or bug fix.
+    bash
+    git checkout -b feature/your-feature-name
+    # or
+    # git checkout -b fix/your-bug-fix
+    
+3.  **Make Your Changes:** Implement your solution, adhering to our coding standards.
+4.  **Test Your Changes:** Ensure all existing tests pass and add new tests for your modifications.
+    bash
+    npm run test
+    
+5.  **Lint and Format:** Ensure your code is clean and adheres to our style guide.
+    bash
+    npm run lint
+    npm run format
+    
+6.  **Commit Your Changes:** Write clear, concise commit messages.
+    bash
+    git add .
+    git commit -m "feat: Add new PDF processing capability"
+    
+7.  **Push to Your Fork:** Push your branch to your forked repository.
+    bash
+    git push origin feature/your-feature-name
+    
+8.  **Open a Pull Request:** Create a Pull Request against the `main` branch of the `chirag127/PDF-To-Speech-AI-Converter-Web-App` repository.
+
+## 📜 Coding Standards & Principles
+
+We expect all code to adhere to the following principles:
+
+*   **SOLID Principles:** (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion)
+*   **DRY (Don't Repeat Yourself):** Avoid redundant code.
+*   **KISS (Keep It Simple, Stupid):** Prioritize simplicity and clarity.
+*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary now.
+*   **Type Safety:** Utilize TypeScript's strict typing features to prevent runtime errors.
+*   **Error Handling:** Implement robust error handling, especially for external API calls (e.g., Gemini AI) and user input.
+
+## 🤖 AI Agent Directives
+
+Our development process is augmented by AI agents. Refer to the `AGENTS.md` file for detailed directives that guide their operation and how they interact with the codebase. When contributing, ensure your changes are compatible with these directives.
+
+## 📈 Testing
+
+Comprehensive testing is crucial. We utilize the following testing frameworks:
+
+*   **Vitest:** For fast unit and integration testing.
+*   **Playwright:** For end-to-end (E2E) testing of the user interface and workflows.
+
+Run all tests before submitting a Pull Request:
+
+bash
+# Run unit and integration tests
+npm run test
+
+# Run end-to-end tests (requires separate setup or specific script)
+# npm run test:e2e
+
+
+## 🐞 Bug Reports
+
+If you find a bug, please open an issue using the `bug_report.md` template. Provide as much detail as possible, including steps to reproduce, expected behavior, and actual behavior.
+
+## ✨ Feature Requests
+
+For new feature ideas, please open an issue and describe your proposed feature, its benefits, and potential implementation ideas.
+
+## ⚖️ License
+
+By contributing to this project, you agree that your contributions will be licensed under the **CC BY-NC 4.0** license, as specified in the `LICENSE` file.
+
+---
